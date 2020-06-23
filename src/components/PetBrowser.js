@@ -8,10 +8,11 @@ class PetBrowser extends React.Component {
 
 
   render() {
-    debugger;
-    const allPets = this.props.pets.map(pet =>
-)
-  return <div className="ui cards"> <Pet pets={allPets} /></div>
+    const allPets = this.props.pets.map(pet => (
+      <Pet pet={pet} />
+    ));
+
+  return <div className="ui cards"> {allPets}</div>
   }
 }
 
