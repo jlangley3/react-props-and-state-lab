@@ -38,7 +38,9 @@ class App extends React.Component {
   }
 
   // onAdoptPet = (petId) => {
-  //    this.state.pets.filter(function(pet){ petId ===})
+  //    const urPet = this.state.pets.map(function(pet){ 
+  //      return petId === pet.id)
+     
   // }
   
 
