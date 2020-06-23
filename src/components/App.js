@@ -16,7 +16,7 @@ class App extends React.Component {
   }
 
   onChangeType = (event) => {
-    debugger;
+    console.log(this.state)
     this.setState({
       filters: {
         type: event.target.value
@@ -33,8 +33,13 @@ class App extends React.Component {
 
    fetch(url)
    .then(response => response.json())      
-   .then(pets => this.setState({ pets: pets }))
+   .then((pets) => {this.setState({ pets: pets });console.log(pets) })
+   
   }
+
+  // onAdoptPet = (petId) => {
+  //    this.state.pets.filter(function(pet){ petId ===})
+  // }
   
 
 
@@ -52,7 +57,9 @@ class App extends React.Component {
               onFindPetsClick={this.fetchDaPets}/>
             </div>
             <div className="twelve wide column">
-              <PetBrowser />
+              <PetBrowser 
+              onAdoptPet={this.onAdoptPet}
+              pets={this.state.pets}/>
             </div>
           </div>
         </div>

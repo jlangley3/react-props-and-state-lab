@@ -2,6 +2,7 @@ import React from 'react'
 
 class Pet extends React.Component {
   render() {
+    debugger;
     return (
       <div className="card">
         <div className="content">
